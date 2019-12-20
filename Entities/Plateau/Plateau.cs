@@ -8,6 +8,12 @@ namespace MarsRover
 {
     public class Plateau
     {
+        /*
+         Plateau nesnemiz plato için gerekli olan maximum X ve Y değerlerini alarak bizim hareket alanımızı tanımlıyor.
+         
+             */
+        private int x;
+        private int y;
         public Plateau(int x,int y)
         {
             if(x>0 && y > 0)
@@ -20,14 +26,14 @@ namespace MarsRover
                 Console.WriteLine("Verilen Koordinatlar Geçersiz!");
             }
         }
-        private int x;
+        
 
         public int X
         {
             get { return x; }
             
         }
-        private int y;
+        
 
         public int Y
         {

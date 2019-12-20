@@ -9,13 +9,20 @@ namespace MarsRover.Utilities
 {
     public class CommandValidator
     {
+        /*
+        Bu sınıfın görevi Command sınıfına gönderilen değerlerin gerçekten istenilen değer türlerinde olup olmadıklarını kontrol etmektir.
+        Command komutları string olarak geliyor. Foreach ile içerideki charlar tek tek kontrol edilerek eğer belirtilen LMR harici bir karakter içeriyorsa flag
+        değişkenimiz false döneceği için tekrardan veri girişi isteyecektir.
+        */
+
         public static bool Validate(string input)
         {
             bool flag = false;
             int check = 0;
+            int L = 76, M = 77, R = 82;
             foreach (char character in input)
             {
-                if (Convert.ToInt32(character) == 76 || Convert.ToInt32(character) == 77 || Convert.ToInt32(character) == 82)
+                if (Convert.ToInt32(character) == L || Convert.ToInt32(character) == M || Convert.ToInt32(character) == R)
                 {
                     check++;
                 }

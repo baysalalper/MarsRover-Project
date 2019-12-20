@@ -11,16 +11,23 @@ namespace MarsRover.Entities.Rover
 {
     public class RoverParameters
     {
+        /*
+         Bu Sınıfın görevi Program.cs tarafından oluşturulacak olan Rover nesnesinin dışardan verilerini alarak önce RoverValidator sınıfında kontrole
+         göndermek ardından ise veriler doğru ise gerekli atamaları gerekli Propertylere gönderek instance alma işlemini tamamlamak.Eğer yanlış veri girilir ise
+         Validator sınıfı false göndereceği için doğru değer gönderilene ve check değişkeni true olana kadar veri alma işlemeni yapmaya devam edecektir.
+
+
+         */
         public static MarsRover.Rover RoverCreator(Plateau plateau)
         {
             bool check=false;
-            List<char> RoverCoordinates;
+            List<char> RoverCoordinates=null;
             Console.WriteLine("Rover Parametrelerini Giriniz");
-            do
+            while (check == false) 
             {
                 RoverCoordinates = InputSeperator.Seperate(Console.ReadLine());
                 check = RoverValidator.Validate(RoverCoordinates);
-            } while (check == false);
+            } 
 
                 int x = (int)char.GetNumericValue(RoverCoordinates[0]);
                 RoverCoordinates.RemoveAt(0);

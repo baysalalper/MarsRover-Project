@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace MarsRover
 {
+    /*
+     Rover Sınıfı Rover Nesnemizi temsil ediyor. IFunctionsdan kalıtım alıyor bu sayede hareket fonksiyonlarının içini Rover'ın hareketine göre  dolduruyoruz.
+     Aynı zamanda Rover'ın X ve Y koordinatlarını içeriyor. Sınıfın kurucu fonksiyonununda ise dışarıdan gönderilen x y ve doğrultu değişkenleri gerekli propertylere
+     atanıyor.
+     Position fonksyionu ise Rover'ın Position fonksiyonunun çağırıldığı andaki konum bilgisini Console'a yazdırıyor.
+
+         */
     public class Rover:IFunctions
     {
         private int xCoordinate;

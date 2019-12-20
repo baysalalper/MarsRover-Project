@@ -9,6 +9,11 @@ namespace MarsRover.Entities.Rover
 {
     public class Command
     {
+        /*
+         Bu Sınıf Rover.Command fonksiyonuna komutlar gönderilmeden önce karakterleri büyük harfe çevirerek ardından CommandValidator'a kontrole gönderiyor.
+         Eğer girilen değerler doğru ise de command stringini Rover içindeki Command fonksiyonuna göndermek üzere program.cs e geri dönrüyor.
+
+             */
         public static string ReturnCommand()
         {
             string command;
