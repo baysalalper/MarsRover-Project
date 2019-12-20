@@ -13,6 +13,7 @@ namespace MarsRover.Entities.Rover
         {
             string command;
             bool check=false;
+            Console.WriteLine("Rover için Komutları Giriniz.");
             do
             {
                 command= Console.ReadLine().ToUpper();

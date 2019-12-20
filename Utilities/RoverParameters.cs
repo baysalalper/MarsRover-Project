@@ -15,7 +15,7 @@ namespace MarsRover.Entities.Rover
         {
             bool check=false;
             List<char> RoverCoordinates;
-
+            Console.WriteLine("Rover Parametrelerini Giriniz");
             do
             {
                 RoverCoordinates = InputSeperator.Seperate(Console.ReadLine());

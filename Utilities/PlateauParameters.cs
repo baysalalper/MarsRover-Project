@@ -12,7 +12,7 @@ namespace MarsRover.Utilities
         {
             bool check = false;
             List<char> plateuSize;
-
+            Console.WriteLine("Plato Parametrelerini Giriniz");
             do
             {
                 plateuSize = InputSeperator.Seperate(Console.ReadLine());
